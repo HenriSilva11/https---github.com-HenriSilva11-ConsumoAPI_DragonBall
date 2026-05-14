@@ -2,7 +2,7 @@
 const container = document.getElementById('personagens-container');
 
 // URL da API (Limite de 50 personagens para um grid bem preenchido)
-const API_URL = 'https://dragonball-api.com/api/characters?limit=100';
+const API_URL = 'https://dragonball-api.com/api/characters?limit=120';
 
 /**
  * Função principal para buscar e renderizar os personagens
