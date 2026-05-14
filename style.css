@@ -1,0 +1,119 @@
+:root {
+    --dbz-orange: #ff8a00;
+    --dbz-yellow: #ffcc00;
+    --dbz-blue: #0062ff;
+    --dbz-cyan: #00f2ff;
+    --sky-gradient: linear-gradient(180deg, #00c6ff 0%, #0072ff 100%);
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    /* Fundo colorido inspirado no céu do planeta Namek/Terra */
+    background: fixed linear-gradient(135deg, #e0f7fa 0%, #80deea 50%, #4dd0e1 100%);
+    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--sky-gradient);
+    padding: 60px 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Corte diagonal dinâmico */
+    box-shadow: 0 10px 30px rgba(0, 98, 255, 0.3);
+}
+
+.dbz-font {
+    font-family: 'Bangers', cursive;
+    font-size: 5.5rem;
+    margin: 0;
+    color: var(--dbz-yellow);
+    letter-spacing: 5px;
+    transform: skew(-10deg);
+    /* Borda azul e sombra laranja para contraste máximo */
+    text-shadow: 
+        4px 4px 0 var(--dbz-blue),
+        -1px -1px 0 var(--dbz-blue),  
+        1px -1px 0 var(--dbz-blue),
+        4px 8px 0 var(--dbz-orange);
+}
+
+.subtitle {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+#personagens-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* CARDS COLORIDOS E VIBRANTES */
+.card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 3px solid transparent;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(2deg); /* Rotação dinâmica no hover */
+    border-color: var(--dbz-orange);
+    box-shadow: 0 20px 40px rgba(255, 138, 0, 0.3);
+    background: #fff;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.2));
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    color: var(--dbz-blue);
+    margin: 10px 0;
+}
+
+.card p {
+    font-weight: bold;
+    color: #444;
+}
+
+/* FOOTER COLORIDO */
+footer {
+    background: var(--dbz-blue);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+footer span {
+    color: var(--dbz-yellow);
+}
+
+/* MOBILE AJUSTES */
+@media (max-width: 600px) {
+    .dbz-font { font-size: 3.5rem; }
+    header { padding: 40px 10px; }
+}
